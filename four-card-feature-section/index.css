@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+:root {
+  --red: hsl(0, 78%, 62%);
+  --cyan: hsl(180, 62%, 55%);
+  --orange: hsl(34, 97%, 64%);
+  --blue: hsl(212, 86%, 64%);
+  --very-dark-blue: hsl(234, 12%, 34%);
+  --grayish-blue: hsl(229, 6%, 66%);
+  --very-light-gray: hsl(0, 0%, 98%);
+}
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  background-color: var(--very-light-gray);
+}
+
+h1 {
+  font-size: 1.6em;
+  color: var(--very-dark-blue);
+}
+
+h2 {
+  font-size: 1.3em;
+  color: var(--very-dark-blue);
+  margin: 0;
+}
+
+/* Utilities Class */
+.text-200 {
+  font-weight: 200;
+}
+
+.block {
+  display: block;
+}
+/* Utilities Class End */
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2em;
+}
+
+.jumbotron {
+  text-align: center;
+  margin-top: 5.6em;
+}
+
+.jumbotron-content {
+  color: var(--grayish-blue);
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 3.6em 0;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 0.5em;
+  margin-top: 1.6em;
+  padding: 1.9em;
+  min-height: 11em;
+  min-width: 11em;
+  max-width: 22em;
+  box-shadow: 0px 10px 30px -15px var(--grayish-blue);
+  overflow: hidden;
+  position: relative;
+}
+
+.card::before {
+  content: "";
+  height: 4px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.card-red::before {
+  background-color: var(--red);
+}
+
+.card-cyan::before {
+  background-color: var(--cyan);
+}
+
+.card-orange::before {
+  background-color: var(--orange);
+}
+
+.card-blue::before {
+  background-color: var(--blue);
+}
+
+.card-content {
+  color: var(--grayish-blue);
+  font-size: 0.9em;
+  margin-top: 0.5em;
+}
+
+.card-icon {
+  text-align: right;
+  margin-top: 2.2em;
+}
+
+.card-icon > img {
+  width: 58px;
+  height: 58px;
+}
+
+@media (min-width: 640px) {
+  .card {
+    min-width: 19.5em;
+    max-width: 19.5em;
+  }
+}
+
+@media (min-width: 1280px) {
+  h1 {
+    font-size: 2.4em;
+    margin: 0;
+  }
+
+  h2 {
+    font-size: 1.4em;
+  }
+
+  .container {
+    padding: 0;
+  }
+
+  .jumbotron {
+    margin-top: 5.1em;
+  }
+
+  .jumbotron-content {
+    width: 35em;
+    max-width: 35em;
+    margin: 0.9em auto 0;
+  }
+
+  .cards {
+    flex-direction: row;
+    height: 35em;
+    margin: 4.4em 0;
+  }
+
+  .cards > div {
+    padding: 0 1em;
+  }
+
+  .cards > div:nth-child(2) {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .card {
+    margin-top: 0;
+    min-height: 12.8em;
+  }
+
+  .card-content {
+    margin-top: 1em;
+  }
+
+  .card-icon {
+    margin-top: 2.9em;
+  }
+
+  .card-icon > img {
+    width: 64px;
+    height: 64px;
+  }
+}

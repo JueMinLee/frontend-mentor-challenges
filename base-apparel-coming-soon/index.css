@@ -1,0 +1,278 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
+
+:root {
+  --desaturated-red: hsl(0, 36%, 70%);
+  --soft-red: hsl(0, 93%, 68%);
+  --dark-grayish-red: hsl(0, 6%, 24%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Utilities Class */
+.text-desaturated-red {
+  color: var(--desaturated-red);
+}
+
+.text-dark-grayish-red {
+  color: var(--dark-grayish-red);
+}
+
+.text-300 {
+  font-weight: 300;
+}
+
+.display-block {
+  display: block;
+}
+/* Utilities Class End */
+
+body {
+  margin: 0;
+  font-size: 16px;
+  font-family: "Josefin Sans", sans-serif;
+  background-image: linear-gradient(
+    135deg,
+    hsl(0, 0%, 100%),
+    hsl(0, 100%, 98%)
+  );
+  height: 100vh;
+}
+
+header {
+  padding: 1.8em 2em;
+}
+
+#header-logo {
+  height: 1.3em;
+}
+
+#hero-image {
+  background-image: url("./images/hero-mobile.jpg");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 15.825em;
+  height: 15.825em;
+}
+
+main {
+  padding: 4em 2em;
+  text-align: center;
+  min-height: 21em;
+}
+
+h1 {
+  font-size: 2.5em;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  margin: 0;
+}
+
+p {
+  font-size: 0.9em;
+  line-height: 1.5em;
+  margin: 1.5em 0;
+}
+
+form {
+  margin-top: 2.2em;
+}
+
+.input-group {
+  position: relative;
+  border: 1px solid #d2d2d2;
+  border-radius: 2em;
+  text-align: left;
+}
+
+#email {
+  height: 3.5em;
+  border: 0;
+  background-color: transparent;
+  padding-right: 5.5em;
+  padding-left: 1.9em;
+  width: 100%;
+  color: var(--dark-grayish-red);
+}
+
+/* Edge */
+#email::-webkit-input-placeholder {
+  color: var(--desaturated-red);
+  opacity: 0.5;
+}
+
+/* Firefox */
+#email::-moz-input-placeholder {
+  color: var(--desaturated-red);
+  opacity: 0.5;
+}
+
+/* Internet Explorer 10-11 */
+#email:-ms-input-placeholder {
+  color: var(--desaturated-red);
+  opacity: 0.5;
+}
+
+#email::placeholder {
+  color: var(--desaturated-red);
+  opacity: 0.5;
+}
+
+#email-submit-btn {
+  background-color: transparent;
+  background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+  border: 0;
+  border-radius: 2em;
+  margin: 0;
+  padding: 0.9em;
+  height: 3.5em;
+  width: 4.5em;
+  box-shadow: 0 1em 2em -0.5em hsl(0, 74%, 74%);
+  position: absolute;
+  right: 0;
+  top: 0;
+  cursor: pointer;
+}
+
+#email-submit-btn:hover {
+  opacity: 0.9;
+}
+
+#email:focus,
+#email-submit-btn:focus {
+  outline: 0;
+  border-radius: 2em;
+  box-shadow: 0 0 1px 2px rgb(77, 144, 254);
+}
+
+.has-error > #email:focus {
+  outline: 0;
+  border-radius: 2em;
+  box-shadow: 0 0 1px 2px lightcoral;
+}
+
+.has-error::after {
+  content: url("./images/icon-error.svg");
+  position: absolute;
+  top: 0.7em;
+  right: 4.5em;
+  width: 24px;
+  height: 24px;
+}
+
+.help-text {
+  display: block;
+  margin-top: 0.5em;
+  padding-right: 5.5em;
+  padding-left: 1.9em;
+  text-align: left;
+}
+
+@media (min-width: 640px) {
+  #hero-image {
+    min-height: 19.53125em;
+  }
+
+  main {
+    margin: 0 auto;
+    width: 600px;
+  }
+}
+
+@media (min-width: 1280px) {
+  body {
+    width: 57.7vw;
+    padding: 4em 10.3em;
+    background-image: url("./images/bg-pattern-desktop.svg");
+    background-size: 57.7vw auto;
+    background-repeat: no-repeat;
+    background-color: hsla(0, 100%, 98%, 0.5);
+  }
+
+  header {
+    padding: 0;
+  }
+
+  #header-logo {
+    height: initial;
+  }
+
+  #hero-image {
+    background-image: url("./images/hero-desktop.jpg");
+    position: absolute;
+    top: 0;
+    right: 0;
+    max-width: 42.3vw;
+    width: 42.3vw;
+    height: 100vh;
+  }
+
+  main {
+    margin: 0;
+    text-align: left;
+    padding: 0;
+    padding-top: 8.2em;
+    min-height: 0;
+  }
+
+  h1 {
+    font-size: 3.9em;
+    line-height: 1.1em;
+  }
+
+  p {
+    font-size: 1em;
+    width: 28em;
+    line-height: 1.7em;
+  }
+
+  form {
+    margin-top: 2.5em;
+  }
+
+  .input-group {
+    width: 28em;
+  }
+
+  #email {
+    height: 4.2em;
+    padding-left: 2.4em;
+    padding-right: 8em;
+  }
+
+  /* Edge */
+  #email::-webkit-input-placeholder {
+    letter-spacing: 0.115em;
+  }
+
+  /* Firefox */
+  #email::-moz-input-placeholder {
+    letter-spacing: 0.115em;
+  }
+
+  /* Internet Explorer 10-11 */
+  #email:-ms-input-placeholder {
+    letter-spacing: 0.115em;
+  }
+
+  #email::placeholder {
+    letter-spacing: 0.115em;
+  }
+
+  #email-submit-btn {
+    height: 4.2em;
+    width: 7.5em;
+  }
+
+  .has-error::after {
+    top: 1em;
+    right: 7.3em;
+  }
+
+  .help-text {
+    padding-left: 2.4em;
+    padding-right: 8em;
+  }
+}

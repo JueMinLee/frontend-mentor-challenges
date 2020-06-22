@@ -1,0 +1,227 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+:root {
+  --red: hsl(0, 100%, 74%);
+  --green: hsl(154, 59%, 51%);
+  --blue: hsl(248, 32%, 49%);
+  --dark-blue: hsl(249, 10%, 26%);
+  --grayish-blue: hsl(246, 25%, 77%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Utilities Class */
+.text-600 {
+  font-weight: 600;
+}
+/* Utilities Class End */
+
+body {
+  margin: 0;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  background-color: var(--red);
+  background-image: url("./images/bg-intro-mobile.png");
+  background-repeat: no-repeat;
+  text-align: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  margin: 4.2em auto;
+  width: 20.4em;
+}
+
+h1 {
+  color: #fff;
+  font-size: 1.7em;
+  line-height: 1.4em;
+}
+
+p {
+  color: #fff;
+}
+
+#submission {
+  margin-top: 2em;
+}
+
+#pricing {
+  background-color: var(--blue);
+  border-radius: 0.5em;
+  padding: 1.2em 4em;
+  box-shadow: 0 0.5em hsla(249, 10%, 26%, 0.3);
+}
+
+.form {
+  background-color: #fff;
+  margin: 1.5em 0;
+  border-radius: 0.5em;
+  padding: 1.5em 1.5em 1em;
+  box-shadow: 0 0.5em hsla(249, 10%, 26%, 0.3);
+  text-align: left;
+}
+
+.input-group {
+  margin-bottom: 0.9em;
+  position: relative;
+}
+
+.input-field {
+  width: 100%;
+  padding: 1.5em;
+  border-radius: 0.5em;
+  border: 1px solid #d3d3d3;
+  font-weight: 600;
+}
+
+.input-field:focus {
+  outline: 0;
+  border-radius: 0.5em;
+  box-shadow: 0 0 1px 2px var(--blue);
+}
+
+/* Edge */
+.input-field::-webkit-input-placeholder {
+  color: var(--dark-blue);
+  font-weight: 600;
+  opacity: 0.8;
+}
+
+/* Firefox */
+.input-field::-moz-input-placeholder {
+  color: var(--dark-blue);
+  font-weight: 600;
+  opacity: 0.8;
+}
+
+/* Internet Explorer 10-11 */
+.input-field:-ms-input-placeholder {
+  color: var(--dark-blue);
+  font-weight: 600;
+  opacity: 0.8;
+}
+
+.input-field::placeholder {
+  color: var(--dark-blue);
+  font-weight: 600;
+  opacity: 0.8;
+}
+
+.input-field.invalid {
+  background-image: url("./images/icon-error.svg");
+  background-position: 95% center;
+  background-repeat: no-repeat;
+  box-shadow: 0 0 1px 2px var(--red);
+  color: var(--red);
+  padding-right: 4em;
+}
+
+.invalid:focus {
+  outline: 0;
+  border-radius: 0.5em;
+  box-shadow: 0 0 1px 2px var(--red);
+}
+
+.help-text {
+  display: block;
+  margin-top: 0.5em;
+  color: var(--red);
+  font-size: 0.7em;
+  font-style: italic;
+  text-align: right;
+}
+
+#submit-button {
+  width: 100%;
+  padding: 1.2em;
+  color: #fff;
+  background-color: var(--green);
+  font-size: 1em;
+  font-weight: 600;
+  text-transform: uppercase;
+  border: 1px solid var(--green);
+  border-radius: 0.5em;
+  cursor: pointer;
+  box-shadow: 0 0.3em hsl(154, 59%, 41%);
+}
+
+#submit-button:focus,
+#submit-button:active {
+  outline: 0;
+  border-radius: 0.5em;
+  box-shadow: 0 0 1px 2px var(--blue), 0 0.3em hsl(154, 59%, 41%);
+}
+
+#submit-button:hover {
+  background-color: hsl(154, 59%, 61%);
+}
+
+#agreement {
+  display: block;
+  margin: 1em 0;
+  padding: 0 1.9em;
+  text-align: center;
+  line-height: 1.7em;
+  font-size: 0.7em;
+  color: var(--grayish-blue);
+}
+
+#agreement a {
+  text-decoration: none;
+  color: var(--red);
+  font-weight: 600;
+}
+
+@media (min-width: 1280px) {
+  body {
+    background-image: url("./images/bg-intro-desktop.png");
+    background-repeat: repeat;
+  }
+
+  main {
+    margin: 0 auto;
+    flex-direction: row;
+    width: 70em;
+    min-height: 800px;
+    height: 100vh;
+  }
+
+  #introduction {
+    width: 35em;
+    max-width: 35em;
+    text-align: left;
+    padding: 17em 0;
+  }
+
+  h1 {
+    font-size: 3em;
+    line-height: 1.2em;
+    margin: 0.5em 0;
+  }
+
+  #submission {
+    width: 34em;
+    max-width: 34em;
+    margin-top: 6.5em;
+  }
+
+  #pricing {
+    padding: 1.1em 4em;
+  }
+
+  .form {
+    padding: 2.5em;
+  }
+
+  .input-group {
+    margin-bottom: 1.2em;
+  }
+
+  .input-field {
+    padding: 1.5em 2.4em;
+  }
+}

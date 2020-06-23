@@ -3,6 +3,7 @@
 :root {
   --dark-blue: hsl(240, 38%, 20%);
   --grayish-blue: hsl(240, 18%, 77%);
+  --animate-duration: 500ms;
 }
 
 * {
@@ -53,6 +54,7 @@ main {
   justify-content: center;
   align-items: center;
   position: relative;
+  animation: var(--animate-duration) fadeInBottom;
 }
 
 .btn-group {
@@ -92,6 +94,7 @@ main {
   width: 100%;
   border-radius: 0.3rem;
   box-shadow: 0 2rem 3rem -3rem var(--dark-blue);
+  animation: var(--animate-duration) fadeInBottom;
 }
 
 .quotes {
@@ -103,6 +106,8 @@ main {
   background-position: center top;
   background-size: 4rem 3rem;
   text-align: center;
+  opacity: 0;
+  animation: var(--animate-duration) 500ms forwards fadeInBottom;
 }
 
 .quote {
@@ -113,6 +118,8 @@ main {
   font-size: 18px;
   font-weight: 300;
   color: var(--dark-blue);
+  opacity: 0;
+  animation: var(--animate-duration) 500ms forwards fadeInBottom;
 }
 
 .quote p::before {
@@ -125,6 +132,8 @@ main {
 
 .person {
   color: var(--grayish-blue);
+  opacity: 0;
+  animation: var(--animate-duration) 1s forwards fadeInBottom;
 }
 
 .person cite {
@@ -157,11 +166,16 @@ main {
     max-width: 32rem;
     max-height: 32rem;
     flex-shrink: 0;
+    animation: var(--animate-duration) fadeInRight;
   }
 
   .btn-group {
     left: 30%;
     bottom: 2.5rem;
+  }
+
+  .image {
+    animation: var(--animate-duration) fadeInRight;
   }
 
   .quotes {
@@ -181,5 +195,29 @@ main {
 
   .person strong {
     display: inline;
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(10%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInBottom {
+  from {
+    opacity: 0;
+    transform: translateY(10%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

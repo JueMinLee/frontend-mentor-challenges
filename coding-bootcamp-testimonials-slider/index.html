@@ -12,6 +12,8 @@
     />
     <link rel="stylesheet" href="./style.css" />
 
+    <script src="./script.js" defer></script>
+
     <title>Frontend Mentor | Coding Bootcamp Testimonials Slider</title>
   </head>
   <body>
@@ -19,12 +21,12 @@
       <section class="testimonials">
         <div class="image-container">
           <div class="btn-group">
-            <button type="button" id="prev-btn" class="btn">
+            <button type="button" id="prev-btn" class="btn" data-switch="prev">
               <img
                 src="./images/icon-prev.svg"
                 alt="Previous image button"
               /></button
-            ><button type="button" id="next-btn" class="btn">
+            ><button type="button" id="next-btn" class="btn" data-switch="next">
               <img src="./images/icon-next.svg" alt="Next image button" />
             </button>
           </div>
@@ -34,17 +36,19 @@
               src="./images/image-tanya.jpg"
               alt="Image of Tanya Sinclair"
               class="image"
+              data-image
             />
             <img
               src="./images/image-john.jpg"
               alt="Image of John Tarkpor"
               class="image hidden"
+              data-image
             />
           </div>
         </div>
 
         <div class="quotes">
-          <blockquote class="quote">
+          <blockquote class="quote" data-quote>
             <p>
               I’ve been interested in coding for a while but never taken the
               jump, until now. I couldn’t recommend this course enough. I’m now
@@ -56,7 +60,7 @@
             </footer>
           </blockquote>
 
-          <blockquote class="quote hidden">
+          <blockquote class="quote hidden" data-quote>
             <p>
               If you want to lay the best foundation possible I’d recommend
               taking this course. The depth the instructors go into is

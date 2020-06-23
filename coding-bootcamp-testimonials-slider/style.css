@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap');
+
+:root {
+  --dark-blue: hsl(240, 38%, 20%);
+  --grayish-blue: hsl(240, 18%, 77%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Utilities Class */
+.hidden {
+  display: none;
+}
+/* Utilities Class End */
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+main {
+  margin: 0 auto;
+  padding: 2rem;
+  min-height: 603px;
+  height: 100vh;
+  background-image: url('./images/pattern-curve.svg');
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-size: 80%;
+}
+
+.testimonials {
+  margin: 0 auto;
+}
+
+.image-container {
+  margin: 0 auto;
+  padding: 2rem;
+  background-image: url('./images/pattern-bg.svg');
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  min-width: 16rem;
+  width: 100%;
+  max-width: 18rem;
+  min-height: 16rem;
+  height: 100%;
+  max-height: 18rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.btn-group {
+  position: absolute;
+  left: 50%;
+  bottom: 1rem;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+.btn {
+  background-color: white;
+  margin: 0;
+  padding: 0.5rem 0.8rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 250ms ease-in-out;
+}
+
+.btn img {
+  transform: scale(0.8);
+}
+
+.btn:hover {
+  background-color: #f4f4fc;
+}
+
+#prev-btn {
+  border-radius: 50% 0 0 50%;
+}
+
+#next-btn {
+  border-radius: 0 50% 50% 0;
+}
+
+.image {
+  width: 100%;
+  border-radius: 0.3rem;
+  box-shadow: 0 2rem 3rem -3rem var(--dark-blue);
+}
+
+.quotes {
+  margin: 2rem 0;
+  padding-top: 0.5rem;
+  background-image: url('./images/pattern-quotes.svg');
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 4rem 3rem;
+  text-align: center;
+}
+
+.quote {
+  margin: 0;
+}
+
+.quote p {
+  font-size: 18px;
+  font-weight: 300;
+  color: var(--dark-blue);
+}
+
+.quote p::before {
+  content: '“ ';
+}
+
+.quote p::after {
+  content: ' ”';
+}
+
+.person {
+  color: var(--grayish-blue);
+}
+
+.person cite {
+  font-style: normal;
+}
+
+.person strong {
+  display: block;
+  color: var(--dark-blue);
+}

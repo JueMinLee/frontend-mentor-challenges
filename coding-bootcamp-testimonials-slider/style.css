@@ -100,6 +100,7 @@ main {
 .quotes {
   margin: 2rem 0;
   padding-top: 0.5rem;
+  min-height: 10rem;
   background-image: url('./images/pattern-quotes.svg');
   background-color: transparent;
   background-repeat: no-repeat;
@@ -182,6 +183,7 @@ main {
     margin: 0;
     margin-left: 8rem;
     padding: 0;
+    min-width: 640px;
     max-width: 640px;
     background-position: 20% top;
     background-size: 5rem 4rem;
